@@ -1,0 +1,60 @@
+{
+    "name": "osqo-osqo",
+    "version": "1.0.0",
+    "client": {
+        "organization": "osqo",
+        "connection": {
+            "timeout": {
+                "peer": {
+                    "endorser": "300"
+                }
+            }
+        }
+    },
+    "organizations": {
+        "osqo": {
+            "mspid": "osqoMSP",
+            "peers": [
+                "peer0.osqo.osqo.com",
+                "peer1.osqo.osqo.com"
+            ],
+            "certificateAuthorities": [
+                "ca.osqo.osqo.com"
+            ]
+        }
+    },
+    "peers": {
+        "peer0.osqo.osqo.com": {
+            "url": "grpcs://localhost:7051",
+            "tlsCACerts": {
+                "pem": "-----BEGIN CERTIFICATE-----\nMIICHzCCAcWgAwIBAgIUVq1ZvfFHRuAHXZDx7BYCTn5UPb4wCgYIKoZIzj0EAwIw\nazELMAkGA1UEBhMCQVUxGDAWBgNVBAgTD05ldyBTb3V0aCBXYWxlczEPMA0GA1UE\nBxMGU3lkbmV5MRYwFAYDVQQKEw1vc3FvLm9zcW8uY29tMRkwFwYDVQQDExBjYS5v\nc3FvLm9zcW8uY29tMCAXDTIyMDgyNDA4NDgwMFoYDzIwNTIwODE2MDg0ODAwWjBr\nMQswCQYDVQQGEwJBVTEYMBYGA1UECBMPTmV3IFNvdXRoIFdhbGVzMQ8wDQYDVQQH\nEwZTeWRuZXkxFjAUBgNVBAoTDW9zcW8ub3Nxby5jb20xGTAXBgNVBAMTEGNhLm9z\ncW8ub3Nxby5jb20wWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAAT1sq51OipOgiaz\n/i2XV17cnxf1D0q6JHBHLTkedjVs0PFjbzxXMXhlbfN4jvaMJ6oqQIujpZgvqZhQ\nGMUbipnfo0UwQzAOBgNVHQ8BAf8EBAMCAQYwEgYDVR0TAQH/BAgwBgEB/wIBATAd\nBgNVHQ4EFgQU/oabg7Q9Q54C5cS63J8h7zi23LowCgYIKoZIzj0EAwIDSAAwRQIh\nAMBt90J+YFTmhdOLXWgaTppJoZG8GZMRk09ZhP7hfTSVAiAgWP+1xPLBbhNIeRIB\nMlm+M5AQDibpqAYWa1RQXVBtgA==\n-----END CERTIFICATE-----\n"
+            },
+            "grpcOptions": {
+                "ssl-target-name-override": "peer0.osqo.osqo.com",
+                "hostnameOverride": "peer0.osqo.osqo.com"
+            }
+        },   
+        "peer1.osqo.osqo.com": {
+            "url": "grpcs://localhost:6051",
+            "tlsCACerts": {
+                "pem": "-----BEGIN CERTIFICATE-----\nMIICHzCCAcWgAwIBAgIUVq1ZvfFHRuAHXZDx7BYCTn5UPb4wCgYIKoZIzj0EAwIw\nazELMAkGA1UEBhMCQVUxGDAWBgNVBAgTD05ldyBTb3V0aCBXYWxlczEPMA0GA1UE\nBxMGU3lkbmV5MRYwFAYDVQQKEw1vc3FvLm9zcW8uY29tMRkwFwYDVQQDExBjYS5v\nc3FvLm9zcW8uY29tMCAXDTIyMDgyNDA4NDgwMFoYDzIwNTIwODE2MDg0ODAwWjBr\nMQswCQYDVQQGEwJBVTEYMBYGA1UECBMPTmV3IFNvdXRoIFdhbGVzMQ8wDQYDVQQH\nEwZTeWRuZXkxFjAUBgNVBAoTDW9zcW8ub3Nxby5jb20xGTAXBgNVBAMTEGNhLm9z\ncW8ub3Nxby5jb20wWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAAT1sq51OipOgiaz\n/i2XV17cnxf1D0q6JHBHLTkedjVs0PFjbzxXMXhlbfN4jvaMJ6oqQIujpZgvqZhQ\nGMUbipnfo0UwQzAOBgNVHQ8BAf8EBAMCAQYwEgYDVR0TAQH/BAgwBgEB/wIBATAd\nBgNVHQ4EFgQU/oabg7Q9Q54C5cS63J8h7zi23LowCgYIKoZIzj0EAwIDSAAwRQIh\nAMBt90J+YFTmhdOLXWgaTppJoZG8GZMRk09ZhP7hfTSVAiAgWP+1xPLBbhNIeRIB\nMlm+M5AQDibpqAYWa1RQXVBtgA==\n-----END CERTIFICATE-----\n"
+            },
+            "grpcOptions": {
+                "ssl-target-name-override": "peer1.osqo.osqo.com",
+                "hostnameOverride": "peer1.osqo.osqo.com"
+            }
+        }
+    },
+    "certificateAuthorities": {
+        "ca.osqo.osqo.com": {
+            "url": "https://localhost:7054",
+            "caName": "ca-osqo",
+            "tlsCACerts": {
+                "pem": ["-----BEGIN CERTIFICATE-----\nMIICHzCCAcWgAwIBAgIUVq1ZvfFHRuAHXZDx7BYCTn5UPb4wCgYIKoZIzj0EAwIw\nazELMAkGA1UEBhMCQVUxGDAWBgNVBAgTD05ldyBTb3V0aCBXYWxlczEPMA0GA1UE\nBxMGU3lkbmV5MRYwFAYDVQQKEw1vc3FvLm9zcW8uY29tMRkwFwYDVQQDExBjYS5v\nc3FvLm9zcW8uY29tMCAXDTIyMDgyNDA4NDgwMFoYDzIwNTIwODE2MDg0ODAwWjBr\nMQswCQYDVQQGEwJBVTEYMBYGA1UECBMPTmV3IFNvdXRoIFdhbGVzMQ8wDQYDVQQH\nEwZTeWRuZXkxFjAUBgNVBAoTDW9zcW8ub3Nxby5jb20xGTAXBgNVBAMTEGNhLm9z\ncW8ub3Nxby5jb20wWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAAT1sq51OipOgiaz\n/i2XV17cnxf1D0q6JHBHLTkedjVs0PFjbzxXMXhlbfN4jvaMJ6oqQIujpZgvqZhQ\nGMUbipnfo0UwQzAOBgNVHQ8BAf8EBAMCAQYwEgYDVR0TAQH/BAgwBgEB/wIBATAd\nBgNVHQ4EFgQU/oabg7Q9Q54C5cS63J8h7zi23LowCgYIKoZIzj0EAwIDSAAwRQIh\nAMBt90J+YFTmhdOLXWgaTppJoZG8GZMRk09ZhP7hfTSVAiAgWP+1xPLBbhNIeRIB\nMlm+M5AQDibpqAYWa1RQXVBtgA==\n-----END CERTIFICATE-----\n"]
+            },
+            "httpOptions": {
+                "verify": false
+            }
+        }
+    }
+}
